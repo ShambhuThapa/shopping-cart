@@ -1,12 +1,24 @@
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { capitalizeEveryWord, formatCurrency } from "../utils/utils";
+import { activeCartId, capitalizeEveryWord, formatCurrency } from "../utils/utils";
 import { TProduct } from "../types";
 import { Rating } from "react-simple-star-rating";
 import { FaShoppingCart } from "react-icons/fa";
+import { useAddNewItemInCart } from "../api/hooks/cart/addItemInCart";
 
 export const ProductCard = ({ product }: { product: TProduct }) => {
-    const { title, slug, brand, price, ratings, images } = product;
+    const { mutate } = useAddNewItemInCart();
+    const { _id, title, slug, brand, price, ratings, images } = product;
+
+    const addProductToCart = (_id: string) => {
+        mutate({
+            cartId: activeCartId(), data: {
+                product: _id,
+                quantity: 1,
+                variantType: "None"
+            }
+        })
+    }
 
     return (
         <Card className="product-card border-light shadow-sm rounded-4 mb-4">
@@ -36,8 +48,8 @@ export const ProductCard = ({ product }: { product: TProduct }) => {
                     allowHover={false}
                     className="my-2"
                 />
-                <Button variant="primary" size="sm" className="mt-auto">
-                    Add to cart <FaShoppingCart/>
+                <Button variant="primary" size="sm" className="mt-auto" onClick={() => addProductToCart(String(_id))}>
+                    Add to cart <FaShoppingCart />
                 </Button>
             </Card.Body>
         </Card>
