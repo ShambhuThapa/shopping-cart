@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import OffcanvasComponent from './OffCanvasComponent';
 import CartIcon from './CartIcon';
+import CartDetail from './CartDetails';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -19,7 +20,7 @@ function Header() {
           </Navbar.Text>
         </Navbar.Collapse>
         {show && <OffcanvasComponent title='Cart Summary' handleShow={handleShow} show={show} >
-          <p> Cart is empty</p>
+          <CartDetail />
         </OffcanvasComponent>
         }
       </Container>

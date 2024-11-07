@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiClient } from "../..";
 import { showToast } from "../../../components/toast";
+import { activeCartId } from "../../../utils/utils";
 type TAddItemInCarProps = {
   cartId: number,
   data: {
@@ -22,13 +23,16 @@ const addNewItem = async ({ cartId, data }: TAddItemInCarProps) => {
 };
 
 export const useAddNewItemInCart = () => {
+  const queryClient = useQueryClient();
+
   return useMutation({
     mutationFn: (data: TAddItemInCarProps) => addNewItem(data),
     onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [`cart ${activeCartId()}`] });
       showToast("success", "Product added to cart", { theme: "light" });
     },
-    onError: (error: any) => {
-      showToast("error", error?.data?.message || "An error occurred");
+    onError: (res: any) => {
+      showToast("error", res?.data?.message || "An error occurred");
     },
   });
 };
