@@ -1,0 +1,86 @@
+@import "./var";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 3.5625rem,
+  4: 1.875rem,
+  5: 1.25rem,
+  6: 1rem,
+);
+
+$position-values: (
+  0: 0,
+  3: 3%,
+  5: 5%,
+  20: 20%,
+  30: 30%,
+  45: 45%,
+  50: 50%,
+  100: 100%,
+  105: 105%,
+);
+
+$spacer: 2rem;
+$headings-margin-bottom: $spacer * 0.5;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+$headings-color: null;
+
+$dropdown-link-color: $primary;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: $info;
+$dropdown-link-active-bg: $info;
+
+$input-btn-focus-box-shadow: 0 0 0 0.1rem $info;
+
+@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.btn_hover:hover {
+  -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+  transform: scale(1.02);
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.product-card .card-body {
+  padding: 1rem;
+}
+
+.product-card .text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

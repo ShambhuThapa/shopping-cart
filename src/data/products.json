@@ -1,0 +1,73 @@
+[{
+    "slug": "north-for-men-fairness-face-wash-scrub-7",
+    "brand": {
+      "_id": "12",
+      "slug": "optimals-3",
+      "name": "Optimals"
+    },
+    "title": "NORTH FOR MEN Fairness Face Wash & Scrub",
+    "price": 89,
+    "strikePrice": 100,
+    "images": [
+      "https://oriflamenepaltest.s3.ap-south-1.amazonaws.com/product_images/product_images-1721991281332.jpeg"
+    ],
+    "ratings": 3.3
+  },
+  {
+    "slug":"north-for-men-fairness-face-wash-scrub-7",
+    "brand":{
+      "_id": "12",
+      "slug": "optimals-3",
+      "name": "Optimals"
+    },
+    "title":"NORTH FOR MEN Fairness Face Wash & Scrub",
+    "price": 89,
+    "strikePrice": 120,
+    "images":[
+      "https://oriflamenepaltest.s3.ap-south-1.amazonaws.com/product_images/product_images-1721818125426.jpeg"
+      ],
+    "ratings":3.3
+  },
+  {
+    "slug":"north-for-men-fairness-face-wash-scrub-7",
+    "brand":{
+      "_id": "12",
+      "slug": "optimals-3",
+      "name": "Optimals"
+    },
+    "title":"NORTH FOR MEN Fairness Face Wash & Scrub",
+    "price": 89,
+    "images":[
+      "https://oriflamenepaltest.s3.ap-south-1.amazonaws.com/product_images/product_images-1721818125426.jpeg"
+      ],
+    "ratings":3.3
+  },
+  {
+    "slug": "north-for-men-fairness-face-wash-scrub-7",
+    "brand": {
+      "_id": "12",
+      "slug": "optimals-3",
+      "name": "Optimals"
+    },
+    "title": "NORTH FOR MEN Fairness Face Wash & Scrub",
+    "price": 89,
+    "images": [
+      "https://oriflamenepaltest.s3.ap-south-1.amazonaws.com/product_images/product_images-1721991281332.jpeg"
+    ],
+    "ratings": 3.3
+  },
+  {
+    "slug":"north-for-men-fairness-face-wash-scrub-7",
+    "brand":{
+      "_id": "12",
+      "slug": "optimals-3",
+      "name": "Optimals"
+    },
+    "title":"NORTH FOR MEN Fairness Face Wash & Scrub",
+    "price": 89,
+    "images":[
+      "https://oriflamenepaltest.s3.ap-south-1.amazonaws.com/product_images/product_images-1721818125426.jpeg"
+      ],
+    "ratings":3.3
+  }
+]

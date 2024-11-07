@@ -1,0 +1,83 @@
+$primary:#9acfdaf5;
+$secondary:#909090;
+$success:#34A853;
+$info:#6396D0;
+$warning:yellow;
+$danger:#fa0000;
+$light:#F4F0F0;
+$dark:#000000;
+$white:#ffffff;
+
+$weak: #E93030;
+$moderate: #FB8A05;
+$strong: #34A853;
+$light2:#cbcbcb;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "weak":   $weak,
+  "moderate": $moderate,
+  "strong": $strong,
+  "light2":$light2
+);
+
+$spacer:1rem;
+$border-width:0.0625rem;
+$headings-margin-bottom:      $spacer * .6;
+$headings-font-family:        Inter;
+$headings-font-style:         null;
+$headings-font-weight:        800;
+$headings-line-height:        normal;
+$headings-color:              $primary;
+
+
+$hr-margin-y:                 $spacer;
+$hr-color:                    $primary;
+$hr-height:                   $border-width;
+$hr-opacity:                  .25;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl:1500px
+);
+
+$opacity: (
+  property: opacity,
+  values: (
+    0: 0,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1,
+  )
+);
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(77, 77, 77, 0.3); 
+  border-radius: 10px ;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5); 
+  background-color: #a3cad2f5;
+}
+
